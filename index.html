@@ -24,13 +24,12 @@
 </head>
 <body>
     <div class="url-display" id="urlDisplay">loading...</div>
-
-    <script>
+<script>
         window.onload = function() {
             const urlDisplay = document.getElementById('urlDisplay');
-            const fullUrl = window.location.href;
-            urlDisplay.textContent = `${fullUrl}`;
+            const pathAndQuery = window.location.pathname + window.location.search + window.location.hash;
+            urlDisplay.textContent = `${pathAndQuery}`;
         };
-    </script>
+</script>
 </body>
 </html>
